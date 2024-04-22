@@ -4,15 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task2
+namespace HW1_dotnet_itvdn
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Book book = new Book("MyBook", "I am author", "My book content.");
+            Console.WriteLine("Сторона а:");
+            double side1 = Convert.ToDouble(Console.ReadLine());
 
-            book.ShowBookInfo();
+            Console.WriteLine("Сторона b:");
+            double side2 = Convert.ToDouble(Console.ReadLine());
+
+            Rectangle rectangle = new Rectangle(side1, side2);
+
+            Console.WriteLine($"Периметр прямокутника: {rectangle.Perimeter}");
+            Console.WriteLine($"Площа прямокутника: {rectangle.Area}");
+
             Console.ReadKey();
         }
     }
